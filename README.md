@@ -2,39 +2,20 @@
 
 ## 📋 Overview
 
-This project implements a **USB Flash Drive-Based Access Control Device Driver** that enhances data security by using a USB flash drive as a physical key. The system unlocks specific files and applications when the designated drive is inserted and automatically locks them when removed.
+This project uses a **USB Flash Drive-Based Access Control Device Driver** that enhances data security by using a USB flash drive as a physical key to protect your files and apps. The system unlocks specific files and applications when the designated drive is inserted and automatically locks them when removed.
 
 
 ---
 
 ## 🎯 Features
 
-Real USB Detection - Detects actual USB drives (not simulated folders)  
+Real USB Detection - Detects actual USB drives  
 USB Authentication - Only your specific USB drive can unlock the system  
-File Protection - Locks/unlocks folders using Windows permissions  
-Application Control - Terminates and blocks specific applications  
+File Protection - Locks/unlocks folders  
+Application Control - Terminates and blocks specific applications when usb is removed 
 Event Logging - Complete audit trail of all access events  
-Graceful Shutdown - Automatically locks everything when program exits  
-Error Handling - Robust error handling and recovery  
+Automatic Shutdown - Automatically locks everything when program exits  
 
----
-
-## 📁 Project Structure
-
-```
-COSC439 Project/
-│
-├── USBKeyDriver.java              # Basic version (files only)
-├── USBKeyDriverIntegrated.java    # Full version (files + apps)
-├── USBSetup.java                  # USB configuration utility
-├── ApplicationLocker.java         # Application locking module
-│
-├── ProtectedFiles/                # Your protected files go here
-├── access_log.txt                 # System event log
-└── README.md                      # This file
-```
-
----
 
 ## 🚀 Quick Start Guide
 
@@ -42,21 +23,21 @@ COSC439 Project/
 
 ```bash
 javac USBSetup.java
-javac USBKeyDriverIntegrated.java
+javac USBKeyDriver.java
 ```
 
 ### Step 2: Configure Your USB Drive
 
 1. Insert your USB flash drive
-2. Run the setup utility:
+2. Run the setup:
    ```bash
    java USBSetup
    ```
 3. Select your USB drive from the list
 4. Confirm the selection
-5. The utility will create a hidden `usb_key.id` file on your USB
+5. The process will create a hidden `usb_key.id` file on your USB
+6. This will make the USB that you used the key for unlocking/locking your files
 
-**⚠️ IMPORTANT:** Keep this USB drive safe! It's now your physical access key.
 
 ### Step 3: Create Protected Folder
 
@@ -69,14 +50,8 @@ Put any files you want to protect in this folder.
 
 ### Step 4: Run the Driver
 
-**Option A: Basic Version (Files Only)**
 ```bash
 java USBKeyDriver
-```
-
-**Option B: Integrated Version (Files + Applications)**
-```bash
-java USBKeyDriverIntegrated
 ```
 
 ### Step 5: Test the System
@@ -90,8 +65,6 @@ java USBKeyDriverIntegrated
    - Apps can now run
 
 ---
-
-## ⚙️ Configuration
 
 ### Change Protected Folder Location
 
@@ -133,19 +106,6 @@ private static final int CHECK_INTERVAL_MS = 2000;  // 2 seconds
 3. Verifies the file contains the "AUTHORIZED_USB_KEY" marker
 4. Only grants access if verification passes
 
-### File Locking (Windows icacls)
-
-**When USB is removed:**
-```
-icacls "ProtectedFiles" /inheritance:r        # Remove inherited permissions
-icacls "ProtectedFiles" /deny %USERNAME%:(R,W,X)   # Deny all access
-```
-
-**When USB is inserted:**
-```
-icacls "ProtectedFiles" /grant %USERNAME%:(OI)(CI)F  # Grant full control
-```
-
 ### Application Locking
 
 **When USB is removed:**
@@ -174,85 +134,7 @@ All events are logged to `access_log.txt` with timestamps:
 
 ---
 
-## 🛡️ Security Features
 
-1. **USB Authentication** - Only your specific USB drive works (not just any USB)
-2. **Hidden Identifier** - The `usb_key.id` file is hidden from casual viewing
-3. **Audit Trail** - Complete log of all access events
-4. **Automatic Lockdown** - Everything locks if program is terminated
-5. **Multi-Layer Protection** - Both file permissions AND application control
-
----
-
-## ⚠️ Important Notes
-
-### Administrator Privileges
-
-Some operations require administrator privileges:
-- Modifying file permissions (icacls)
-- Terminating processes (taskkill)
-- Modifying firewall rules
-
-**Run as Administrator** on Windows for full functionality.
-
-### Windows Only
-
-This implementation uses Windows-specific commands:
-- `icacls` (file permissions)
-- `taskkill` (process termination)
-- `attrib` (file attributes)
-
-### Backup Your Data
-
-⚠️ **ALWAYS** back up important files before testing!  
-The file locking mechanism can prevent access to your files if something goes wrong.
-
-### Testing
-
-Test thoroughly with non-critical files first!
-
----
-
-## 🐛 Troubleshooting
-
-### Problem: "Protected folder not found"
-
-**Solution:** Create the folder manually:
-```bash
-mkdir "C:\JAVA CODE VSC\COSC439 Project\ProtectedFiles"
-```
-
-### Problem: USB not detected
-
-**Causes:**
-1. USB drive letter might be C: or D: (which are skipped)
-2. `usb_key.id` file not created or deleted
-3. USB drive not properly formatted
-
-**Solutions:**
-1. Use a removable USB drive (E:, F:, etc.)
-2. Re-run `USBSetup.java`
-3. Check if file exists: `dir E:\usb_key.id /ah`
-
-### Problem: Files not locking/unlocking
-
-**Causes:**
-1. Not running as Administrator
-2. File permissions already modified manually
-3. Files are currently open
-
-**Solutions:**
-1. Right-click → "Run as Administrator"
-2. Reset permissions manually via File Properties
-3. Close all files in the protected folder
-
-### Problem: Applications still running after USB removed
-
-**Cause:** Some applications restart automatically
-
-**Solution:** Add them to Windows Startup restrictions or use more advanced process blocking
-
----
 
 ## 🚨 Emergency Access
 
@@ -285,15 +167,11 @@ icacls "C:\JAVA CODE VSC\COSC439 Project\ProtectedFiles" /grant %USERNAME%:F /t
 - `.id` files: Plain text USB identifier files
 - `.txt` logs: Plain text event logs
 
-### Performance
-- Memory usage: ~10-20 MB
-- CPU usage: <1% (polling-based)
-- Disk I/O: Minimal (only during lock/unlock operations)
 
 ---
 ## 🎓 Project Information
 
-- **Platform:** Windows
+- **Platform:** Windows, Mac/Linux
 - **Language:** Java
 
 ---
@@ -308,8 +186,3 @@ If you encounter issues:
 4. Test with a simple file first
 5. Review the troubleshooting section above
 
----
-
-**Last Updated:** 2024
-
-**Status:** Educational Project - Use at your own risk!

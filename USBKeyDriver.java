@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
  * Cross-Platform USB Key Driver
  * Works on Windows, Linux, and macOS
  */
-public class USBKeyDriverCrossPlatform {
+public class USBKeyDriver {
     // Configuration
     private static final String USB_IDENTIFIER_FILE = "usb_key.id";
     private static String PROTECTED_FOLDER;  // Set based on OS
