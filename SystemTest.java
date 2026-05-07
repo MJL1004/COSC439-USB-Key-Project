@@ -5,7 +5,7 @@ import java.nio.file.*;
  * Cross-Platform System Verification Test
  * Works on Windows, Linux, and macOS
  */
-public class SystemTestCrossPlatform {
+public class SystemTest {
     
     private static final String OS = System.getProperty("os.name").toLowerCase();
     private static final boolean IS_WINDOWS = OS.contains("windows");
