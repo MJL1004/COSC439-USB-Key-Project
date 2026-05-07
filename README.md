@@ -4,19 +4,18 @@
 
 This project implements a **USB Flash Drive-Based Access Control Device Driver** that enhances data security by using a USB flash drive as a physical key. The system unlocks specific files and applications when the designated drive is inserted and automatically locks them when removed.
 
-**Think of it as a physical key for certain parts of your system.**
 
 ---
 
 ## 🎯 Features
 
-✅ **Real USB Detection** - Detects actual USB drives (not simulated folders)  
-✅ **USB Authentication** - Only your specific USB drive can unlock the system  
-✅ **File Protection** - Locks/unlocks folders using Windows permissions  
-✅ **Application Control** - Terminates and blocks specific applications  
-✅ **Event Logging** - Complete audit trail of all access events  
-✅ **Graceful Shutdown** - Automatically locks everything when program exits  
-✅ **Error Handling** - Robust error handling and recovery  
+Real USB Detection - Detects actual USB drives (not simulated folders)  
+USB Authentication - Only your specific USB drive can unlock the system  
+File Protection - Locks/unlocks folders using Windows permissions  
+Application Control - Terminates and blocks specific applications  
+Event Logging - Complete audit trail of all access events  
+Graceful Shutdown - Automatically locks everything when program exits  
+Error Handling - Robust error handling and recovery  
 
 ---
 
@@ -273,24 +272,6 @@ If you lose access to your files:
 takeown /f "C:\JAVA CODE VSC\COSC439 Project\ProtectedFiles" /r /d y
 icacls "C:\JAVA CODE VSC\COSC439 Project\ProtectedFiles" /grant %USERNAME%:F /t
 ```
-
----
-
-## 🔮 Future Enhancements
-
-Potential improvements for this project:
-
-1. **File Encryption** - Encrypt files instead of just locking permissions
-2. **Cross-Platform** - Support for Linux and macOS
-3. **GUI Interface** - User-friendly configuration interface
-4. **Multiple USB Keys** - Support for multiple authorized USB drives
-5. **Time-Based Access** - Automatic locking after specific time periods
-6. **Network Storage** - Support for network drives and cloud storage
-7. **Biometric Integration** - Combine USB key with fingerprint/face recognition
-8. **Mobile App** - Control via smartphone
-9. **Email Alerts** - Notifications when unauthorized access attempted
-10. **Key Rotation** - Periodic re-authorization of USB keys
-
 ---
 
 ## 📚 Technical Details
@@ -310,23 +291,8 @@ Potential improvements for this project:
 - Disk I/O: Minimal (only during lock/unlock operations)
 
 ---
-
-## 📝 License
-
-This is a student project for educational purposes.
-
----
-
-## 👥 Contributing
-
-This is a course project, but suggestions and improvements are welcome!
-
----
-
 ## 🎓 Project Information
 
-- **Course:** COSC 439
-- **Purpose:** USB-based access control system
 - **Platform:** Windows
 - **Language:** Java
 
