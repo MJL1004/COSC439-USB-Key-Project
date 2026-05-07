@@ -1,0 +1,86 @@
+[2026-04-27 18:21:22] === USB Key Driver Started (Cross-Platform) ===
+[2026-04-27 18:21:22] Operating System: mac os x
+[2026-04-27 18:21:22] Files locked successfully
+[2026-04-27 18:21:23] Applications locked
+[2026-04-27 18:21:23] USB KEY INSERTED at /Volumes/Lexar
+[2026-04-27 18:21:23] USB key verified successfully
+[2026-04-27 18:21:23] Files unlocked successfully
+[2026-04-27 18:21:23] Applications unlocked
+[2026-04-27 18:21:45] USB KEY REMOVED
+[2026-04-27 18:21:45] Files locked successfully
+[2026-04-27 18:21:45] Applications locked
+[2026-04-27 18:22:09] USB KEY INSERTED at /Volumes/Lexar
+[2026-04-27 18:22:09] USB key verified successfully
+[2026-04-27 18:22:09] Files unlocked successfully
+[2026-04-27 18:22:09] Applications unlocked
+[2026-04-27 18:22:21] USB KEY REMOVED
+[2026-04-27 18:22:21] Files locked successfully
+[2026-04-27 18:22:21] Applications locked
+[2026-04-27 18:23:17] USB Key Driver Shutting Down
+[2026-04-27 18:23:17] Files locked successfully
+[2026-04-27 18:23:17] Applications locked
+[2026-04-27 19:43:02] === USB Key Driver Started (Cross-Platform) ===
+[2026-04-27 19:43:02] Operating System: mac os x
+[2026-04-27 19:43:02] Files locked successfully
+[2026-04-27 19:43:03] Applications locked
+[2026-04-27 19:43:03] USB KEY INSERTED at /Volumes/Lexar
+[2026-04-27 19:43:03] USB key verified successfully
+[2026-04-27 19:43:03] Files unlocked successfully
+[2026-04-27 19:43:03] Applications unlocked
+[2026-04-27 19:43:39] USB KEY REMOVED
+[2026-04-27 19:43:39] Files locked successfully
+[2026-04-27 19:43:39] Applications locked
+[2026-04-27 19:43:55] USB KEY INSERTED at /Volumes/Lexar
+[2026-04-27 19:43:55] USB key verified successfully
+[2026-04-27 19:43:55] Files unlocked successfully
+[2026-04-27 19:43:55] Applications unlocked
+[2026-04-27 19:44:08] USB Key Driver Shutting Down
+[2026-04-27 19:44:08] Files locked successfully
+[2026-04-27 19:44:08] Applications locked
+[2026-05-06 19:51:34] === USB Key Driver Started (Cross-Platform) ===
+[2026-05-06 19:51:34] Operating System: mac os x
+[2026-05-06 19:51:35] Files locked successfully
+[2026-05-06 19:51:35] Applications locked
+[2026-05-06 19:51:49] USB Key Driver Shutting Down
+[2026-05-06 19:51:49] Files locked successfully
+[2026-05-06 19:51:49] Applications locked
+[2026-05-06 19:52:15] === USB Key Driver Started (Cross-Platform) ===
+[2026-05-06 19:52:15] Operating System: mac os x
+[2026-05-06 19:52:15] Files locked successfully
+[2026-05-06 19:52:15] Applications locked
+[2026-05-06 19:52:27] USB Key Driver Shutting Down
+[2026-05-06 19:52:27] Files locked successfully
+[2026-05-06 19:52:27] Applications locked
+[2026-05-07 11:01:34] === USB Key Driver Started (Cross-Platform) ===
+[2026-05-07 11:01:34] Operating System: mac os x
+[2026-05-07 11:01:34] Files locked successfully
+[2026-05-07 11:01:34] Applications locked
+[2026-05-07 11:01:34] USB KEY INSERTED at /Volumes/Lexar
+[2026-05-07 11:01:37] USB key verified successfully
+[2026-05-07 11:01:37] Files unlocked successfully
+[2026-05-07 11:01:37] Applications unlocked
+[2026-05-07 11:02:03] USB Key Driver Shutting Down
+[2026-05-07 11:02:03] Files locked successfully
+[2026-05-07 11:02:04] Applications locked
+[2026-05-07 11:36:56] === USB Key Driver Started (Cross-Platform) ===
+[2026-05-07 11:36:56] Operating System: mac os x
+[2026-05-07 11:36:56] Files locked successfully
+[2026-05-07 11:36:56] Applications locked
+[2026-05-07 11:36:56] USB KEY INSERTED at /Volumes/Lexar
+[2026-05-07 11:36:56] USB key verified successfully
+[2026-05-07 11:36:56] Files unlocked successfully
+[2026-05-07 11:36:56] Applications unlocked
+[2026-05-07 11:37:14] USB Key Driver Shutting Down
+[2026-05-07 11:37:14] Files locked successfully
+[2026-05-07 11:37:14] Applications locked
+[2026-05-07 11:41:37] === USB Key Driver Started (Cross-Platform) ===
+[2026-05-07 11:41:37] Operating System: mac os x
+[2026-05-07 11:41:37] Files locked successfully
+[2026-05-07 11:41:37] Applications locked
+[2026-05-07 11:41:37] USB KEY INSERTED at /Volumes/Lexar
+[2026-05-07 11:41:37] USB key verified successfully
+[2026-05-07 11:41:37] Files unlocked successfully
+[2026-05-07 11:41:37] Applications unlocked
+[2026-05-07 11:44:24] USB Key Driver Shutting Down
+[2026-05-07 11:44:24] Files locked successfully
+[2026-05-07 11:44:24] Applications locked
